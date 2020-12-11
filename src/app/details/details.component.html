@@ -1,0 +1,59 @@
+
+  <div >
+    <h1>Requestor Approval</h1> 
+    <table class="table table-striped">
+  
+      <thead>
+          <tr>
+            <th>Requestor ID</th>
+            <th>Patient Name</th>
+            <th>Email</th>
+            <th>Status</th>
+            <th>Accept</th>
+            <th>Reject</th>
+          </tr>
+        </thead>
+      
+    <tbody>
+      <tr *ngFor="let request of requestors | async">
+        <td>{{request.requestId}}</td>
+        <td>{{request.patientName}}</td>
+        <td>{{request.email}}</td>
+        <td>{{request.status}}</td>
+        <td><button class="btn btn-success btn-sm" (click)='accept(request)'>Accept</button></td>
+        <td><button class="btn btn-danger btn-sm" (click)='reject(request)'>Reject</button></td>
+      </tr>
+    </tbody>
+    </table>
+  </div>
+
+  <!-- <div >
+    <h1>Donar Approval</h1> 
+    <table class="table table-striped">
+  
+      <thead>
+          <tr>
+            <th>Donar ID</th>
+            <th>Donar name</th>
+            <th>Blood Group</th>
+            <th>Status</th>
+            <th>Accept</th>
+            <th>Reject</th>
+          </tr>
+        </thead>
+      
+    <tbody>
+      <tr *ngFor="let donar of donators | async">
+        <td>{{donar.id}}</td>
+        <td>{{donar.name}}</td>
+        <td>{{donar.bloodGroup}}</td>
+        <td>{{donar.status}}</td>
+        <td><button class="btn btn-success btn-sm" (click)='Accept(donar)'>Accept</button></td>
+        <td><button class="btn btn-danger btn-sm" (click)='Reject(donar)'>Reject</button></td>
+      </tr>
+    </tbody>
+    </table>
+  </div> -->
+  
+
+  

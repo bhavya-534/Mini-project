@@ -1,0 +1,105 @@
+<mat-card>
+
+    <div [hidden]="submitted">
+        <form (ngSubmit)="onSubmit()" #requestsform="ngForm">
+        
+   <div class="form-group ">
+       <label for="requestId">Requestor Id</label>
+       <span>
+       <input type="number" class="form-control" id="requestId" required [(ngModel)]="requests.requestId" name="requestId" #requestId="ngModel" [class.is-invalid]="requestId.invalid && requestId.touched">
+       <small class="text-danger" [class.d-none]="requestId.valid || requestId.untouched">Requestor ID is required</small>
+   </span>
+   </div>
+
+   <div class="form-group ">
+    <label for="patientName">Patient Name</label>
+    <span>
+    <input type="text" class="form-control" id="patientName" required [(ngModel)]="requests.patientName" name="patientName" #patientName="ngModel" [class.is-invalid]="patientName.invalid && patientName.touched">
+    <small class="text-danger" [class.d-none]="patientName.valid || patientName.untouched">Patient Name is required</small>
+</span>
+</div>
+
+<div class="form-group ">
+    <label for="bloodGroup">Blood Group</label>
+    <span>
+    <input type="text" class="form-control" id="bloodGroup" required [(ngModel)]="requests.bloodGroup" name="bloodGroup" #bloodGroup="ngModel" [class.is-invalid]="bloodGroup.invalid && bloodGroup.touched">
+    <small class="text-danger" [class.d-none]="bloodGroup.valid || bloodGroup.untouched">Blood Group is required</small>
+</span>
+</div>
+
+<div class="form-group">
+    <label for="city">City</label>
+    <span>
+    <input type="text" class="form-control" id="city" required [(ngModel)]="requests.city" name="city" #city="ngModel" [class.is-invalid]="city.invalid && city.touched">
+    <small class="text-danger" [class.d-none]="city.valid || city.untouched">City is required</small>
+</span>
+</div>
+
+<div class="form-group">
+    <label for="doctarName">Doctar Name</label>
+    <span>
+    <input type="text" class="form-control" id="doctarName" required [(ngModel)]="requests.doctarName" name="doctarName" #doctarName="ngModel" [class.is-invalid]="doctarName.invalid && doctarName.touched">
+    <small class="text-danger" [class.d-none]="doctarName.valid || doctarName.untouched">Doctar Name is required</small>
+</span>
+</div>
+
+<div class="form-group">
+    <mat-label>Hospital Name & Address</mat-label>
+       <textarea class="form-control" id="hospitalName" required [(ngModel)]="requests.hospitalName" name="hospitalName" #hospitalName="ngModel" [class.is-invalid]="hospitalName.invalid && hospitalName.touched"></textarea>
+       <small class="text-danger" [class.d-none]="hospitalName.valid || hospitalName.untouched">Hospital name is required</small>
+    
+   </div>
+
+<div class="form-group">
+    <label for="time">Time of the Day</label>
+    <span>
+    <input type="date" class="form-control" id="time" required [(ngModel)]="requests.time" name="time" #time="ngModel" [class.is-invalid]="time.invalid && time.touched">
+    <small class="text-danger" [class.d-none]="time.valid || time.untouched">Time of the Day is required</small>
+
+ </span>
+</div>
+
+<div class="form-group">
+    <label for="contactName">Contact Name</label>
+    <span>
+    <input type="text" class="form-control" id="contactName" required [(ngModel)]="requests.contactName" name="contactName" #contactName="ngModel" [class.is-invalid]="contactName.invalid && contactName.touched">
+    <small class="text-danger" [class.d-none]="contactName.valid || contactName.untouched">Contact Name is required</small>
+</span>
+</div>
+
+<div class="form-group">
+    <label for="contactNumber">Contact Number</label>
+    <span>
+    <input type="number" class="form-control" id="contactNumber" required [(ngModel)]="requests.contactNumber" name="contactNumber" #contactNumber="ngModel" [class.is-invalid]="contactNumber.invalid && contactNumber.touched">
+    <small class="text-danger" [class.d-none]="contactNumber.valid || contactNumber.untouched">Contact Number is required</small>
+</span>
+</div>
+
+<div class="form-group">
+    <label for="email">Email</label>
+    <span>
+    <input type="email" class="form-control" id="email" required [(ngModel)]="requests.email" name="email" #email="ngModel" [class.is-invalid]="email.invalid && email.touched">
+    <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email is required</small>
+</span>
+</div>
+
+<div class="form-group">
+    <mat-label>Message</mat-label>
+       <textarea class="form-control" id="message" required [(ngModel)]="requests.message" name="message" #message="ngModel" [class.is-invalid]="message.invalid && message.touched"></textarea>
+       <small class="text-danger" [class.d-none]="message.valid || message.untouched">Message is required</small>
+    
+   </div>
+
+    
+   <div class="submit">
+   <button type="submit" class="btn btn-success btn-md" [disabled]="requestsform.form.invalid">Submit</button>
+</div>
+
+    </form>
+    </div>
+    <div [hidden]="!submitted">
+        <h4>You submitted successfully!</h4>
+        <button class="btn btn-success" (click)="newRequest()">Add Requestor</button>
+    </div>
+
+</mat-card>

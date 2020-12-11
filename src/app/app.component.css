@@ -1,0 +1,45 @@
+.btn
+{
+    margin:10px;
+    min-width: 120px;
+    max-width: 120px;
+}
+
+.content{
+   
+    background-image: url("/assets/img/cells.gif");
+    background-size:cover;
+    background-repeat: no-repeat;
+    padding:50px;
+    background-attachment: fixed;
+    padding-bottom: 200px;
+    text-align: center;
+    min-height: 100vh;
+    width:100%;
+    
+}
+hr{
+    border:0.2px solid #ddd;
+    width:50%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    text-align: center;
+}
+.header
+{
+    display:block;
+    width:100%;
+    color:#ddd;
+}
+
+h1{
+    font-size:-webkit-xxx-large;; 
+    font-family: 'Sansita Swashed', cursive;
+    line-height: initial;
+}
+
+.btn
+{
+    font-family: 'Patua One', cursive;
+    font-size: larger;
+}

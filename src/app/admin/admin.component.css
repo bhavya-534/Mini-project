@@ -1,0 +1,22 @@
+mat-card
+{
+    text-align:justify;
+    line-height: 2;
+    max-width: 50%;
+    color: black;
+    padding: 20px ;
+    margin: 30px auto; 
+    float: none; 
+     
+}
+
+.submit
+{
+    text-align: center;
+}
+
+label
+{
+    font-size: larger;
+    font-weight: 500;
+}

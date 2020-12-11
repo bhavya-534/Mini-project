@@ -1,0 +1,138 @@
+<mat-card>
+  
+  <h1>Search Blood Group</h1>
+  <div >
+    
+    <form (ngSubmit)=onSubmit()>
+      <div class="form-group">
+
+        <input type="text" placeholder="Blood Group" class="form-control" id="bloodGroup" required [(ngModel)]="bloodGroup" name="bloodGroup">
+   
+      </div>
+
+      <div class="submit">
+        <button type="submit" class="btn btn-success btn-sm">Submit</button>
+      </div>
+    </form>
+  </div>
+  <br />
+  <div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Donar ID</th>
+          <th>Donar Name</th>
+          <th>Blood Group</th>
+          <th>Patient ID</th>
+          <th>time</th>
+          <th>level</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let donar of donators">
+          <td>{{donar.id}}</td>
+          <td>{{donar.name}}</td>
+          <td>{{donar.bloodGroup}}</td>
+          <td>{{donar.patientId}}</td>
+          <td>{{donar.time}}</td>
+          <td>{{donar.level}}</td>
+  
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+</mat-card>
+
+
+
+<mat-card>
+  <h1>Search Patient Name</h1>
+  <div>
+    <form (ngSubmit)=onSubmit()>
+      <div class="form-group">
+        <input type="text" placeholder="patient name" class="form-control" id="patientName" required [(ngModel)]="patientName" name="patientName">
+      </div>
+
+      <div class="submit">
+        <button type="submit" class="btn btn-success btn-sm">Submit</button>
+      </div>
+
+    </form>
+  </div>
+  <br />
+  <div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Request ID</th>
+          <th>Patient Name</th>
+          <th>Blood Group</th>
+          <th>Contact Number</th>
+          <th>Status</th>
+      
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let request of requestors">
+          <td>{{request.requestId}}</td>
+          <td>{{request.patientName}}</td>
+          <td>{{request.bloodGroup}}</td>
+          <td>{{request.contactNumber}}</td>
+          <td>{{request.status}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</mat-card>
+
+<mat-card>
+  
+  <h1>Search Donar ID</h1>
+  <div >
+    <form (ngSubmit)=onSubmit()>
+      <div class="form-group">
+
+        <input type="number" placeholder="Donar ID" class="form-control" id=" id" required [(ngModel)]=" id" name=" id">
+      </div>
+      <div class="submit">
+        <button type="submit" class="btn btn-success btn-sm">Submit</button>
+      </div>
+    </form>
+
+  </div>
+  <br />
+  <div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Doonar ID</th>
+          <th>Doonar Name</th>
+          <th>Blood Group</th>
+          <th>Patient ID</th>
+          <th>time</th>
+          <th>level</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let donar of donators">
+          <td>{{donar.id}}</td>
+          <td>{{donar.name}}</td>
+          <td>{{donar.bloodGroup}}</td>
+          <td>{{donar.patientId}}</td>
+          <td>{{donar.time}}</td>
+          <td>{{donar.level}}</td>
+          <td>{{donar.status}}</td>
+  
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+</mat-card>
+
